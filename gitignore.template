@@ -1,0 +1,4 @@
+.env
+replace_env/.env
+nginx/certs/server.crt
+nginx/certs/server.key
