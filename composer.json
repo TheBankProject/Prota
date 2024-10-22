@@ -1,0 +1,20 @@
+{
+    "name": "minuz/base-api",
+    "autoload": {
+        "psr-4": {
+            "Minuz\\BaseApi\\": "app/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Angelium-Eddra",
+            "email": "angelium.eddra1972@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "scripts": {
+        "start" : "php -S localhost:8080 -t app/public"
+    }
+}
