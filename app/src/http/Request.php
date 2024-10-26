@@ -1,6 +1,6 @@
 <?php
 
-namespace Minuz\BaseApi\http;
+namespace Minuz\Prota\http;
 
 class Request
 {

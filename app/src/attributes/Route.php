@@ -1,5 +1,5 @@
 <?php
-namespace Minuz\BaseApi\attributes;
+namespace Minuz\Prota\attributes;
 
 #[\Attribute(\Attribute::TARGET_METHOD)]
 class Route

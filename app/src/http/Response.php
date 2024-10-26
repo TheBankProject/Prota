@@ -1,5 +1,5 @@
 <?php
-namespace Minuz\BaseApi\http;
+namespace Minuz\Prota\http;
 
 
 class Response
@@ -8,8 +8,7 @@ class Response
     {
         header('Content-type: application/json', response_code: $code);
         header("Access-Control-Allow-Origin: *");
-
-
+        
         if (  $jwt != null ) {
             header("Authorization: Bearer $jwt");
         }
@@ -19,7 +18,20 @@ class Response
         );
         
         $json = json_encode($data);
+        echo $json;
+    }
 
+
+
+    public static function TestResponse()
+    {
+        header('Content-type: application/json', response_code: 200);
+        header("Access-Control-Allow-Origin: *");
+
+        $json = json_encode([
+            'Warning' => 'OK',
+            'Status message' => 'Hello from Prota!' 
+        ]);
         echo $json;
     }
 }

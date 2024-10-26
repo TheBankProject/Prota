@@ -1,8 +1,8 @@
 <?php
-namespace Minuz\BaseApi\http;
+namespace Minuz\Prota\http;
 
-use Minuz\BaseApi\attributes\Route;
-use Minuz\BaseApi\exceptions\RouteNotFound;
+use Minuz\Prota\attributes\Route;
+use Minuz\Prota\exceptions\RouteNotFound;
 
 
 class Router

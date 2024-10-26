@@ -1,5 +1,5 @@
 <?php
-namespace Minuz\BaseApi\exceptions;
+namespace Minuz\Prota\exceptions;
 
 
 class RouteNotFound extends \Exception

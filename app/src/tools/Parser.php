@@ -1,6 +1,6 @@
 <?php
 
-namespace Minuz\BaseApi\Tools;
+namespace Minuz\Prota\Tools;
 
 class Parser
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Minuz\BaseApi\Tools;
+namespace Minuz\Prota\Tools;
 
-use Minuz\BaseApi\tools\Parser;
+use Minuz\Prota\tools\Parser;
 
 
 class URLDecomposer

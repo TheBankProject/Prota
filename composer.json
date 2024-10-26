@@ -1,8 +1,8 @@
 {
-    "name": "minuz/base-api",
+    "name": "minuz/prota",
     "autoload": {
         "psr-4": {
-            "Minuz\\BaseApi\\": "app/src/"
+            "Minuz\\Prota\\": "app/src/"
         }
     },
     "authors": [

@@ -1,18 +1,18 @@
 <?php
 
-namespace Minuz\BaseApi\Core;
+    namespace Minuz\Prota\Core;
 
-use Minuz\BaseApi\exceptions\RouteNotFound;
-use Minuz\BaseApi\http\Request;
-use Minuz\BaseApi\http\Response;
-use Minuz\BaseApi\http\Router;
-use Minuz\BaseApi\tools\URLDecomposer;
+    use Minuz\Prota\exceptions\RouteNotFound;
+    use Minuz\Prota\http\Request;
+    use Minuz\Prota\http\Response;
+    use Minuz\Prota\http\Router;
+    use Minuz\Prota\tools\URLDecomposer;
 
 class Core
 {
     public static function dispatch(Router $router)
     {
-        $prefixController = 'Minuz\\BaseApi\\controllers\\';
+        $prefixController = 'Minuz\\Prota\\controllers\\';
 
         $url = Request::path();
         URLDecomposer::Detach($url, $urlData);
@@ -20,7 +20,7 @@ class Core
         $route = $urlData['path'];
         
         if ( Request::path() == '/' ) {
-            Response::Response(200, 'Ok', 'Hello from BaseAPI!');
+            Response::TestResponse();
             return;
         }
         try {

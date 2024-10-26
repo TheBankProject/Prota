@@ -2,8 +2,8 @@
 require_once __DIR__ . '/../src/config/bootstrap.php';
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-use Minuz\BaseApi\Core\Core;
-use Minuz\BaseApi\http\Router;
+use Minuz\Prota\Core\Core;
+use Minuz\Prota\http\Router;
 
 
 $router = new Router(); 

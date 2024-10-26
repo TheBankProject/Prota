@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'minuz/base-api',
+        'name' => 'minuz/prota',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '60c6072715dcff769ee15daf1681bea9e6f9be85',
+        'reference' => '8e183bdd3537eb9829f52861cd24beb263c8fd91',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -19,10 +19,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'minuz/base-api' => array(
+        'minuz/prota' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '60c6072715dcff769ee15daf1681bea9e6f9be85',
+            'reference' => '8e183bdd3537eb9829f52861cd24beb263c8fd91',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

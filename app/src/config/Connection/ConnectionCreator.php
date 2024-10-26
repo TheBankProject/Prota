@@ -1,5 +1,5 @@
 <?php
-namespace Minuz\Api\Config\Connection;
+namespace Minuz\Prota\Config\Connection;
 
 
 class ConnectionCreator

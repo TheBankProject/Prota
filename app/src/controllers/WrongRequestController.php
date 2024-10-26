@@ -1,8 +1,8 @@
 <?php
-namespace Minuz\BaseApi\controllers;
+namespace Minuz\Prota\controllers;
 
-use Minuz\BaseApi\http\Request;
-use Minuz\BaseApi\http\Response;
+use Minuz\Prota\http\Request;
+use Minuz\Prota\http\Response;
 
 class WrongRequestController
 {
