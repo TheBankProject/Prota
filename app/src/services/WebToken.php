@@ -1,16 +1,19 @@
 <?php
 namespace Minuz\BaseApi\services;
 
+use CacheExpires;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
 session_start();
 class WebToken
 {
-    public static function Login(array|bool $auth)
+    public static function login(array|bool $auth): void
     {
-        $token = JWT::encode($auth, $_ENV['JWT_KEY'], 'HS256');
-        return;
+        $acessToken = JWT::encode($auth, $_ENV['JWT_KEY'], 'HS256');
+        $_SESSION['acessToken'] = $acessToken;
+        session_cache_expire(CacheExpires::fast);
+        return; 
     }
 
 
@@ -22,14 +25,14 @@ class WebToken
 
 
 
-    public static function SessionLogin()
+    public static function getInfo(string $token): string
     {
         try {
-            $info = JWT::decode($token, new Key($_ENV['JWT_KEY'], 'HS256'));
+            $auth = JWT::decode($token, new Key($_ENV['JWT_KEY'], 'HS256'));
         } catch (\UnexpectedValueException $e) {
             return;
         }
 
-        return;
+        return $auth->;
     }
 }

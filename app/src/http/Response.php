@@ -23,7 +23,7 @@ class Response
 
 
 
-    public static function TestResponse()
+    public static function TestResponse(): void
     {
         header('Content-type: application/json', response_code: 200);
         header("Access-Control-Allow-Origin: *");

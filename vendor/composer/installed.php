@@ -3,13 +3,22 @@
         'name' => 'minuz/prota',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '8e183bdd3537eb9829f52861cd24beb263c8fd91',
+        'reference' => 'f847bdb956f0384f4039f046c1ed13d43a93daa0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'firebase/php-jwt' => array(
+            'pretty_version' => 'v6.10.1',
+            'version' => '6.10.1.0',
+            'reference' => '500501c2ce893c824c801da135d02661199f60c5',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../firebase/php-jwt',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'graham-campbell/result-type' => array(
             'pretty_version' => 'v1.1.3',
             'version' => '1.1.3.0',
@@ -22,7 +31,7 @@
         'minuz/prota' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '8e183bdd3537eb9829f52861cd24beb263c8fd91',
+            'reference' => 'f847bdb956f0384f4039f046c1ed13d43a93daa0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
