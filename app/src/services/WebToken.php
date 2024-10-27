@@ -15,14 +15,7 @@ class WebToken
         session_cache_expire(CacheExpires::fast);
         return; 
     }
-
-
-
-    public static function Signup(array|bool $auth)
-    {
-
-    }
-
+    
 
 
     public static function getInfo(string $token): string
