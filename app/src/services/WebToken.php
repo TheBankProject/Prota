@@ -12,14 +12,7 @@ class WebToken
         $token = JWT::encode($auth, $_ENV['JWT_KEY'], 'HS256');
         return;
     }
-
-
-
-    public static function Signup(array|bool $auth)
-    {
-
-    }
-
+    
 
 
     public static function SessionLogin()
