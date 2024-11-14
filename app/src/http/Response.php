@@ -4,13 +4,26 @@ namespace Minuz\Prota\http;
 
 class Response
 {
-    public static function Response(int $code, string $warning = 'None', string $message = 'None', array $data = [], ?string $jwt = null)
-    {
+    public static function Response(
+        int $code,
+        string $warning = 'None',
+        string $message = 'None',
+        array $data = [],
+        ?string $jwt = null,
+        array $header = null
+    ) {
         header('Content-type: application/json', response_code: $code);
         header("Access-Control-Allow-Origin: *");
         
-        if (  $jwt != null ) {
+        if ( $jwt != null ) {
             header("Authorization: Bearer $jwt");
+        }
+
+        if ( $header ) {
+            foreach ( $header as $key => $value ) {
+                $headerString = "$key: $value";
+                header($headerString);
+            }
         }
         
         $data = array_merge(

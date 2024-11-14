@@ -16,22 +16,35 @@ class Parser
 
 
 
-    public static function HaveValues(array $data, array $checklist): array
+    public static function HaveValues(array|null|false &$data): void
     {
-        $markedChecklist = [];
-        foreach( $checklist as $checklistItem) {
-            $markedChecklist[$checklistItem] = isset($data[$checklistItem]) ? true : false;
+        if ( ! $data ) {
+            $data = false;
+            return;
+        }
+        foreach( $data as $index => $item) {
+            $clearedItem = trim($item);
+            if ( ! $clearedItem ) {
+                $data[$index] = false;
+            }
         }
         
-        return $markedChecklist;
+        return;
     }
 
 
 
-    public static function HaveNullVaLues(array $data): bool
+    public static function HaveEmptyVaLues(array $data): bool
     {
         foreach ( $data as $item ) {
-            if ( $item == null ) { return true; }
+            if ( $item == null ) {
+                return true;
+            }
+
+            $itemCleaned = trim($item);
+            if ( $itemCleaned == '' ) {
+                return true;
+            }
         }
 
         return false;

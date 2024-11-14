@@ -37,6 +37,7 @@ class ComposerStaticInita9aa2ca5d6f5dcc64e984f88fabbba86
         ),
         'D' => 
         array (
+            'Ds\\' => 3,
             'Dotenv\\' => 7,
         ),
     );
@@ -69,6 +70,10 @@ class ComposerStaticInita9aa2ca5d6f5dcc64e984f88fabbba86
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
+        'Ds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-ds/php-ds/src',
         ),
         'Dotenv\\' => 
         array (

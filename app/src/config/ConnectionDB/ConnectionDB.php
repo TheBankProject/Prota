@@ -1,9 +1,8 @@
 <?php
-namespace Minuz\Prota\Config\Connection;
+namespace Minuz\Prota\config\ConnectionDB;
 
 
-class ConnectionCreator
-{
+class ConnectionDB {
     public static function connect(): \PDO
     {
         $dsn = sprintf('%s:host=%s;port=%s;dbname=%s;charset=utf8',

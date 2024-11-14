@@ -15,10 +15,14 @@ class URLDecomposer
         ];
         $queryString = parse_url($url, PHP_URL_QUERY);
         
-        $requestPath = parse_url($url, PHP_URL_PATH);
-        $patternId = '~\/[\w]+\/[\w]+\/([\S]+)~';
-        if ( preg_match($patternId, $requestPath, $matches) ) {
-            $id = $matches[1];
+        $requestPath = rtrim(parse_url($url, PHP_URL_PATH), '/');
+
+        $patternId = '~^\/(?:(\w+)(?:\/(\w+))?)?(?:\/?(\d\w+))?$~';
+        if ( preg_match($patternId, $requestPath, $matches) && count($matches) > 2) {
+            
+            $matches = array_reverse($matches);
+            $id = $matches[0];
+            
             $routerPath = str_replace($id, '{id}', $routerPath);
             $urlInfo['id'] = $id;
         }

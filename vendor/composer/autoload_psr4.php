@@ -13,5 +13,6 @@ return array(
     'Minuz\\Prota\\' => array($baseDir . '/app/src'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
+    'Ds\\' => array($vendorDir . '/php-ds/php-ds/src'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
 );
